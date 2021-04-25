@@ -78,7 +78,7 @@ extension CityVC:UITableViewDelegate,UITableViewDataSource {
             header.backgroundColor = UIColor.systemOrange
         }
         else {
-        header.backgroundColor = UIColor.systemGreen
+            header.backgroundColor = UIColor.systemGreen
         }
         let cityArr = city.allKeys
         header.cityLb.text = cityArr[section] as? String ?? ""
@@ -87,9 +87,9 @@ extension CityVC:UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let keysArr = city.allKeys as! [String]
-//        print(keysArr)
+        //        print(keysArr)
         let stateArr = keysArr[section]
-//        print(stateArr)
+        //        print(stateArr)
         state = city.value(forKey: "\(stateArr)") as! [String]
         return state.count
     }
